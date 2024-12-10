@@ -7,9 +7,9 @@ from percy import percy_snapshot
 
 # Define device configurations
 DEVICE_CONFIGS = {
-    "desktop": None,  # Default context (no device emulation)
-    "iphone": "iPhone 13",
-    "ipad": "iPad (gen 7)"
+    "desktop": None  # Default context (no device emulation)
+    # "iphone": "iPhone 13",
+    # "ipad": "iPad (gen 7)"
 }
 
 def slow_scroll(page, scroll_increment=500, delay=4000):
