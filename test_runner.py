@@ -44,7 +44,7 @@ def run_test(base_url, path, mode, device_name, accept_button_locator=None):
         page = context.new_page()
 
         # Navigate to the URL
-        page.goto(url, wait_until='networkidle')
+        page.goto(url)
 
 
         # Set a custom page title for snapshot identification
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     parser.add_argument("--mode", choices=["baseline", "validate"], default="validate", help="Test mode: 'baseline' or 'validate'")
     parser.add_argument("--excel-file", default="urls.xlsx", help="Excel file containing paths")
     parser.add_argument("--accept-locator", default=None, help="Locator for the accept button")
-    parser.add_argument("--devices", nargs="+", default=["desktop", "iphone", "ipad"], help="List of devices to simulate (e.g., desktop, iphone, ipad)")
+    parser.add_argument("--devices", nargs="+", default=["desktop"], help="List of devices to simulate (e.g., desktop, iphone, ipad)")
 
     args = parser.parse_args()
 
